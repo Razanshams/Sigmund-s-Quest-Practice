@@ -1,0 +1,36 @@
+.title {
+    text-align: center;
+    color: blue; 
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.funny {
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 60%;
+    font-size: x-large;
+    font-style: italic;
+    border-color: aqua;
+    background-color: burlywood;
+}
+html, body {
+    height: 95%;
+    margin: 0;
+   
+}
+.maindiv {
+    color: black;
+    background-color: orange;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 90%;
+    width: 85%;
+    border: 9px solid black;
+    
+    font-family: Tahoma;
+
+}

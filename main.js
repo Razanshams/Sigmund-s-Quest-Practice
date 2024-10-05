@@ -1,12 +1,12 @@
 function showImages(circleId, imageContainerId) {
     const circleContainer = document.getElementById(circleId);
-    circleContainer.style.display = 'flex'; // Show the container
+    circleContainer.style.visibility = 'visible'; // Show the container
 
     // List of image paths
     const images = [
-        'images/my_image1.png', // Update with your actual image paths
-        'images/my_image2.png',
-        'images/my_image3.png'
+        'images/circle.png', // Update with your actual image paths
+        'images/semicircle.png',
+        'images/square.png'
     ];
 
     // Clear the image container before adding images
@@ -39,8 +39,9 @@ function showImages(circleId, imageContainerId) {
 }
 
 // Add event listeners for each button
-document.getElementById('show-images-button1').addEventListener('click', function() {
+document.getElementById('show-images-button').addEventListener('click', function() {
     showImages('circle-container1', 'image-container1');
+    showImages('circle-container2', 'image-container2');
 });
 
 document.getElementById('show-images-button2').addEventListener('click', function() {

@@ -15,7 +15,10 @@ function showImages(circleId, imageContainerId) {
         }
         return array;
     }
-
+    function playAudio() {
+        var audio = document.getElementById("myAudio");
+        audio.play();
+    }
     // Function to select 4 random strings
     function selectRandomStrings() {
         // Shuffle the string array
@@ -59,9 +62,12 @@ function showImages(circleId, imageContainerId) {
         imageContainer.appendChild(img); // Append the image to the image container
     });
 }
+const inputField = document.getElementById("userInput");
+        const audio = document.getElementById("myAudio");
 document.getElementById("userInput").addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
         submitInput();
+        audio.play();
     }
 });
 
@@ -75,6 +81,7 @@ function submitInput() {
     // Display on the webpage
     document.getElementById("output").innerText = "You entered: " + input;
 }
+
 
 
 function displayInput() {

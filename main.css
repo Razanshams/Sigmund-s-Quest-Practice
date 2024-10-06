@@ -1,9 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
 
 .title {
     text-align: center;
     color: blue; 
     font-size: 40px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.maindiv {
+    color: black;
+    background-color: orange;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 90%;
+    width: 85%;
+    border: 9px solid black;
+    font-family: Tahoma;
 }
 
 .funny {
@@ -14,14 +33,40 @@
     font-size: x-large;
     font-style: italic;
     border-color: aqua;
+    background-color: burlywood;
     background-color: rgb(187, 85, 37);
     text-align: end;
 }
-html, body {
-    height: 95%;
-    margin: 0;
-   
+
+#circle-container1 {
+    width: 300px;               /* Set width and height for the circle */
+    height: 300px;
+    background-color: white;    /* Circle background color */
+    border-radius: 50%;         /* Make it a circle */
+    display: flex;              /* Use flexbox to center images */
+    align-items: center;        /* Center vertically */
+    justify-content: center;     /* Center horizontally */
+    margin: 20px auto;         /* Center the circle on the page */
+    position: relative;         /* Required for absolute positioning of images */
+    overflow: hidden;           /* Hide overflow if images are too big */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    visibility: hidden; /* Initially hidden */
 }
+
+#circle-container2 {
+    width: 300px;               /* Set width and height for the circle */
+    height: 300px;
+    background-color: white;    /* Circle background color */
+    border-radius: 50%;         /* Make it a circle */
+    display: flex;              /* Use flexbox to center images */
+    align-items: center;        /* Center vertically */
+    justify-content: center;     /* Center horizontally */
+    margin: 20px auto;         /* Center the circle on the page */
+    position: relative;         /* Required for absolute positioning of images */
+    overflow: hidden;           /* Hide overflow if images are too big */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    visibility: hidden; /* Initially hidden */
+
 .textbox {
     color: black;
     background-color: rgb(239, 84, 28);
@@ -37,11 +82,33 @@ html, body {
 
 }
 
-.box{
-    background-color: gray;
-    border-radius: 0ch;
-    border-color: color(srgb red green rgb(33, 55, 47));
+#image-container {
+    display: flex;               
+    flex-wrap: wrap;            
+    justify-content: center;     
+}
 
+.image {
+    display: block;              
+    margin: 0px;               
+    max-width: 100px;           
+    height: auto;               
+}
+
+
+.hidden {
+    display: none;              
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+.gamediv{
+    display: flex;          /* Use flexbox to align items */
+    justify-content: space-between; /* Optional: Space out the items evenly */
+    gap: 20px; 
+}
 }
 .dot {
     height: 200px;

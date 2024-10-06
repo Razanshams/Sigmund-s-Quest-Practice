@@ -94,3 +94,32 @@ button {
     justify-content: space-between; /* Optional: Space out the items evenly */
     gap: 20px; 
 }
+@keyframes borderAnimation {
+    0% {
+        border-color: #ff5733;
+    }
+    20% {
+        border-color: #d78a16;
+    }
+    40% {
+        border-color: #e6fe0b;
+    }
+    60% {
+        border-color: #04f7aa;
+    }
+    80% {
+        border-color: #0062ff;
+    }
+    100% {
+        border-color: #e100ff;
+    }
+}
+
+#userInput {
+    border: 3px solid #ccc;
+    border-radius: 15px; /* Makes the edges rounded */
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    animation: borderAnimation 5s linear infinite; /* Applies the border animation */
+}

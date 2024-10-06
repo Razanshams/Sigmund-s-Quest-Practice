@@ -3,11 +3,33 @@ function showImages(circleId, imageContainerId) {
     circleContainer.style.visibility = 'visible'; // Show the container
 
     // List of image paths
-    const images = [
-        'images/circle.png', // Update with your actual image paths
-        'images/semicircle.png',
-        'images/square.png'
+    const images_complete = [
+      'images/circle.png','images/heart.png','images/hexagon.png','images/kite.png',
+      'images/octagon.png','images/parallelogram.png','images/semicircle.png','images/square.png',
+      'images/square.png','images/star.png','images/triangle.png'
     ];
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+        }
+        return array;
+    }
+
+    // Function to select 4 random strings
+    function selectRandomStrings() {
+        // Shuffle the string array
+        const shuffledStrings = shuffleArray([...images_complete]); // Copy the array and shuffle it
+
+        // Select the first 4 strings from the shuffled array
+        const shuffled_4 = shuffledStrings.slice(0, 4);
+
+      
+    }
+    const images = [
+        'images/circle.png','images/heart.png','images/hexagon.png'
+      ];
+
 
     // Clear the image container before adding images
     const imageContainer = document.getElementById(imageContainerId);
@@ -37,7 +59,28 @@ function showImages(circleId, imageContainerId) {
         imageContainer.appendChild(img); // Append the image to the image container
     });
 }
+document.getElementById("userInput").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        submitInput();
+    }
+});
 
+// Function to handle the user input
+function submitInput() {
+    const input = document.getElementById("userInput").value;
+    
+    // Output to the console
+    console.log("User input: " + input);
+
+    // Display on the webpage
+    document.getElementById("output").innerText = "You entered: " + input;
+}
+
+
+function displayInput() {
+    const input = document.getElementById("userInput").value;
+    document.getElementById("outputParagraph").innerText = "You entered: " + input;
+}
 // Add event listeners for each button
 document.getElementById('show-images-button').addEventListener('click', function() {
     showImages('circle-container1', 'image-container1');
@@ -56,3 +99,18 @@ document.getElementById('show-images-button2').addEventListener('click', functio
 //       x.style.display = "none";
 //     }
 //   }
+// Listen for the "Enter" keypress on the input field
+
+  function shufflesymbols(array) {
+          for (let i = array.length - 1; i > 0; i--) {
+              const j = Math.floor(Math.random() * (i + 1));
+              [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+          }
+          return array;
+      }
+      
+          const shuffledImages = shufflesymbols([...images_complete]); // Copy the array and shuffle it
+
+          // Select the first 4 images from the shuffled array
+          const selectedImages = images.slice(0, 4);
+    

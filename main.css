@@ -27,15 +27,15 @@ body {
 
 .funny {
     width: 80%;
-    
+    align-items: center;
+    justify-content: center;
     margin: auto;
-    height: 40%;
+    height: 60%;
     font-size: x-large;
     font-style: italic;
     border-color: aqua;
     background-color: burlywood;
-    background-color: rgb(187, 85, 37);
-    text-align: end;
+    
 }
 
 #circle-container1 {
@@ -66,20 +66,6 @@ body {
     overflow: hidden;           /* Hide overflow if images are too big */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
     visibility: hidden; /* Initially hidden */
-
-.textbox {
-    color: black;
-    background-color: rgb(239, 84, 28);
-  
-    margin: auto;
-    height: 90%;
-    width: 85%;
-    border: 9px solid black;
-    
-    font-family: Tahoma;
-
-    align-items: center;
-
 }
 
 #image-container {
@@ -95,7 +81,6 @@ body {
     height: auto;               
 }
 
-
 .hidden {
     display: none;              
 }
@@ -109,29 +94,3 @@ button {
     justify-content: space-between; /* Optional: Space out the items evenly */
     gap: 20px; 
 }
-}
-.dot {
-    height: 200px;
-    width: 200px;
-    background-color: #7b3015;
-    border-radius: 50%;
-    display: inline-block;
-    
-  }
-  .menu {
-    height: 60%;
-  }
-  .margin {
-    height: 15%
-    
-  }
-  .textbox_margin {
-    width:20%;
-    
-  }
-  .text{
-    font-size: x-large;
-    font-style: italic;
-   
-
-  }

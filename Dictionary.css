@@ -31,24 +31,22 @@
 
 .shapes {
     background-color: aqua;
-    height: 500px;
     font-family: "Concert One", sans-serif;
     font-size: 40px;
 }
 
 .body {
     background-color: blueviolet;
-
     font-family: "Concert One", sans-serif;
     font-size: 40px;
 }
 
 .fruits {
     background-color: aquamarine;
-    height: 500px;
     font-family: "Concert One", sans-serif;
     font-size: 40px;
 }
+
 #shapes {
     display: flex; /* Ensures the content stacks vertically */
     flex-wrap: wrap;
@@ -59,8 +57,30 @@
 }
 
 
+#shapes1 {
+    display: flex; /* Ensures the content stacks vertically */
+    flex-wrap: wrap;
+    width: 100%;    /* Adjust as needed */
+    overflow: auto; /* Prevents overflow issues */
+    margin-bottom: 20px; /* Space from the next div */
+}
+
+#shapes2 {
+    display: flex; /* Ensures the content stacks vertically */
+    flex-wrap: wrap;
+    width: 100%;    /* Adjust as needed */
+    overflow: auto; /* Prevents overflow issues */
+    margin-bottom: 20px; /* Space from the next div */
+}
 
 
+#shapes3 {
+    display: flex; /* Ensures the content stacks vertically */
+    flex-wrap: wrap;
+    width: 100%;    /* Adjust as needed */
+    overflow: auto; /* Prevents overflow issues */
+    margin-bottom: 20px; /* Space from the next div */
+}
 
 
 

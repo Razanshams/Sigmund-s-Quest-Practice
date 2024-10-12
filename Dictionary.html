@@ -10,23 +10,20 @@
 
 <body>
     <div class="container">
-        <div class="box1"> Yo mama </div>
+        <div class="box1"> Shapes </div>
         <div class="box1"> Body </div>
         <div class="box1"> Fruits </div>
     </div>       
 </body>
 <div class="shapes">
-    hello
-</div>
-<div class="body">
-    Body
-        <div id="shapes"></div>
+    Shapes
+    <div id="shapes" ></div>
 
     <script>
         let images_complete = [
-            'images/circle.png', 'images/heart.png', 'images/hexagon.png', 'images/kite.png',
-            'images/octagon.png', 'images/parallelogram.png', 'images/semicircle.png', 
-            'images/square.png', 'images/star.png', 'images/triangle.png'
+            'images/ShapesSymbols/circle.png', 'images/ShapesSymbols/heart.png', 'images/ShapesSymbols/hexagon.png', 'images/ShapesSymbols/kite.png',
+            'images/ShapesSymbols/octagon.png', 'images/ShapesSymbols/parallelogram.png', 'images/ShapesSymbols/semicircle.png', 
+            'images/ShapesSymbols/square.png', 'images/ShapesSymbols/star.png', 'images/ShapesSymbols/triangle.png'
         ];
 
         function pathToName(path) {
@@ -58,8 +55,90 @@
         });
     </script>
 </div>
+</div>
+
+<div class="body">
+    Body
+    <div id="shapes2"></div>
+    
+    <script>
+        let images_complete1 = [
+            'images/BodySymbols/arm.png', 'images/BodySymbols/bone.png', 'images/BodySymbols/brain.png', 'images/BodySymbols/eye.png',
+            'images/BodySymbols/foot.png', 'images/BodySymbols/hand.png', 'images/BodySymbols/heart.png', 
+            'images/BodySymbols/Leg.png', 'images/BodySymbols/lungs.png', 'images/BodySymbols/Mouth.png', 'images/BodySymbols/Muscle.png', 'images/BodySymbols/Nose.png', 'images/BodySymbols/skull.png'
+        ];
+
+        function pathToName(path) {
+            let filename = path.split('/').pop();
+            return filename.split('.')[0];
+        }
+
+        function descriptionRepetition(paths, Id) {
+            let container = document.getElementById(Id);
+            container.innerHTML = '';
+            paths.forEach(path => {
+                let imgDiv = document.createElement('div');
+                imgDiv.style.marginBottom = '10px';
+
+                let img = document.createElement('img');
+                img.src = path;
+                img.alt = pathToName(path);
+                img.style.width = '100px';
+
+                let description = document.createTextNode(`${pathToName(path)}`);
+                imgDiv.appendChild(img);
+                imgDiv.appendChild(description);
+                container.appendChild(imgDiv);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            descriptionRepetition(images_complete1, 'shapes2');
+        });
+    </script>
+    
+</div>
 <div class="fruits">
     Fruits
+
+    <div id="shapes3"></div>
+    <script>
+        let images_complete2 = [
+            'images/FruitSymbols/Apple.png', 'images/FruitSymbols/Avocado.png', 'images/FruitSymbols/Banana.png', 'images/FruitSymbols/Blackberry.png',
+            'images/FruitSymbols/Blueberry.png', 'images/FruitSymbols/Cherry.png', 'images/FruitSymbols/Dragon_Fruit.png', 
+            'images/FruitSymbols/Grape.png', 'images/FruitSymbols/Grapefruit.png', 'images/FruitSymbols/kiwi.png', 'images/FruitSymbols/Lemon.png', 'images/FruitSymbols/Lime.png',
+            'images/FruitSymbols/Mango.png', 'images/FruitSymbols/Orange.png', 'images/FruitSymbols/Peach.png', 'images/FruitSymbols/Pear.png', 'images/FruitSymbols/Pineapple.png', 'images/FruitSymbols/Raspberry.png',
+            'images/FruitSymbols/Starfruit.png', 'images/FruitSymbols/Strawberry.png', 'images/FruitSymbols/Watermelon.png'
+        ];
+
+        function pathToName(path) {
+            let filename = path.split('/').pop();
+            return filename.split('.')[0];
+        }
+
+        function descriptionRepetition(paths, Id) {
+            let container = document.getElementById(Id);
+            container.innerHTML = '';
+            paths.forEach(path => {
+                let imgDiv = document.createElement('div');
+                imgDiv.style.marginBottom = '10px';
+
+                let img = document.createElement('img');
+                img.src = path;
+                img.alt = pathToName(path);
+                img.style.width = '100px';
+
+                let description = document.createTextNode(`${pathToName(path)}`);
+                imgDiv.appendChild(img);
+                imgDiv.appendChild(description);
+                container.appendChild(imgDiv);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            descriptionRepetition(images_complete2, 'shapes3');
+        });
+    </script>
 </div>
 </div>
 </html>

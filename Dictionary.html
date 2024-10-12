@@ -39,16 +39,18 @@
             container.innerHTML = '';
             paths.forEach(path => {
                 let imgDiv = document.createElement('div');
-                imgDiv.style.marginBottom = '10px';
+                imgDiv.classList.add('shape-image-div');
 
                 let img = document.createElement('img');
                 img.src = path;
                 img.alt = pathToName(path);
-                img.style.width = '100px';
+                img.classList.add('shape-image');
 
-                let description = document.createTextNode(`${pathToName(path)}`);
+                let descriptionDiv = document.createElement('div');
+                descriptionDiv.textContent = pathToName(path);
+                descriptionDiv.classList.add('shape-div');
                 imgDiv.appendChild(img);
-                imgDiv.appendChild(description);
+                imgDiv.appendChild(descriptionDiv);
                 container.appendChild(imgDiv);
             });
         }

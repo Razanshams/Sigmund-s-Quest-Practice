@@ -13,7 +13,7 @@ function typeText(text) {
         if (index < text.length) {
             typingElement.innerHTML += text.charAt(index);
             index++;
-            typingTimeout = setTimeout(type, 50); // Adjust typing speed (100ms per character)
+            typingTimeout = setTimeout(type, 10); // Adjust typing speed (100ms per character)
         } else {
             audioElement.pause(); // Stop the audio once typing is done
         }
@@ -39,42 +39,4 @@ function changeText(newText) {
 
 // Initialize with default text
 typeText(originalText);
-
-
-// script.js
-
-let images_complete = [
-    'images/circle.png', 'images/heart.png', 'images/hexagon.png', 'images/kite.png',
-    'images/octagon.png', 'images/parallelogram.png', 'images/semicircle.png', 
-    'images/square.png', 'images/star.png', 'images/triangle.png'
-];
-
-function pathToName(path) {
-    let filename = path.split('/').pop();
-    return filename.split('.')[0];
-}
-
-function descriptionRepetition(paths, Id) {
-    let container = document.getElementById(Id);
-    container.innerHTML = '';
-    paths.forEach(path => {
-        let imgDiv = document.createElement('div');
-        imgDiv.style.marginBottom = '10px';
-
-        let img = document.createElement('img');
-        img.src = path;
-        img.alt = pathToName(path);
-        img.style.width = '100px';
-
-        let description = document.createTextNode(`${pathToName(path)}`);
-        imgDiv.appendChild(img);
-        imgDiv.appendChild(description);
-        container.appendChild(imgDiv);
-    });
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    descriptionRepetition(images_complete, 'shapes');
-});
-
-        
+      

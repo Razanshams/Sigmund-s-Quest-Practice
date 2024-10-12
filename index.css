@@ -9,8 +9,9 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: linear-gradient(45deg, #2c78f3, #c2e9fb);
-        background-size: 200% 200%;
+    background: linear-gradient(135deg, #76bff0, #507de8, #404eee, #76bff0);
+    background-size: 400% 400%; /* To create a large gradient area */
+    animation: gradientAnimation 15s ease infinite; /* Animation for moving gradient */
         animation: gradient-animation 10s ease infinite;
    
     

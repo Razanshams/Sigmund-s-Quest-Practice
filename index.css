@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #2c78f3, #c2e9fb);
+        background-size: 200% 200%;
+        animation: gradient-animation 10s ease infinite;
+   
+    
+}
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.menu_top {
+    display: flex;
+ 
+    height:500px;
+    justify-content: space-around;
+    align-items: center;
+    
+    
+    
+  }
+.item{
+    width:300px;
+    height:300px;
+    background: #254def;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex:1;
+    margin: 50px;
+    border-radius: 15px;
+    
+}
+
+
+.item1{
+    width:300px;
+    height:300px;
+    background: #254def;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex:1;
+    margin: 50px;
+    border-radius: 15px;
+    transition: transform 0.2s;
+}
+.item1:hover {
+    background-color: deepskyblue;
+    transform: scale(1.05); /* Slightly enlarge the box */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.item2{
+    width:300px;
+    height:300px;
+    background: #254def;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex:1;
+    margin: 50px;
+    border-radius: 15px;
+    transition: transform 0.2s;
+    
+}
+.item2:hover {
+    background-color: deepskyblue;
+    transform: scale(1.05); /* Slightly enlarge the box */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+.item3{
+    width:300px;
+    height:300px;
+    background: #254def;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex:1;
+    margin: 50px;
+    border-radius: 15px;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+.item3:hover {
+    background-color: deepskyblue;
+    transform: scale(1.05); /* Slightly enlarge the box */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.menu_bottom {
+    display: flex;
+    flex-direction: row;
+   
+    height: 250px;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+    margin-top: auto; /* Pushes the flexbox to the bottom */
+   
+   
+   
+}
+#textbox {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    width: 75%;
+    height: 90%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 15px; /* Rounded corners */
+    font-size: 16px;
+    box-sizing: border-box; /* Makes padding and border included in width */
+    background-color: brown;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #3498db;
+    margin-right: 50px;
+    display: inline-block;
+    cursor: pointer;
+}
+.text {
+    font-size: large;
+    flex: 1; /* Take up the remaining space to center the text */
+    text-align: left;
+    margin-right: 30px;
+}

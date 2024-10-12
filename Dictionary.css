@@ -1,0 +1,66 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+.box1 {
+    width: 300px;
+    height: 400px;
+    background-color: blue;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.3);
+    font-family: "Concert One", sans-serif;
+    font-size: 50px; 
+}
+
+
+.container {
+    background-color: grey;
+    display: flex;
+    justify-content: space-around;
+    height: 500px;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    font-family: "Concert One", sans-serif;
+    font-size: 100px;
+    background-color: red;
+}
+
+.shapes {
+    background-color: aqua;
+    height: 500px;
+    font-family: "Concert One", sans-serif;
+    font-size: 40px;
+}
+
+.body {
+    background-color: blueviolet;
+
+    font-family: "Concert One", sans-serif;
+    font-size: 40px;
+}
+
+.fruits {
+    background-color: aquamarine;
+    height: 500px;
+    font-family: "Concert One", sans-serif;
+    font-size: 40px;
+}
+#shapes {
+    display: flex; /* Ensures the content stacks vertically */
+    flex-wrap: wrap;
+    width: 100%;    /* Adjust as needed */
+    overflow: auto; /* Prevents overflow issues */
+    margin-bottom: 20px; /* Space from the next div */
+
+}
+
+
+
+
+
+
+

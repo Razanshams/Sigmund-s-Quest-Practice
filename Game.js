@@ -2,7 +2,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const item1 = document.getElementById('item1');
     const item2 = document.getElementById('item2');
     const item3 = document.getElementById('item3');
+    const item5 = document.getElementById('openPageButton');
 
+    
     if (item1) {
         item1.addEventListener('click', function () {
             localStorage.setItem('n', 4);
@@ -17,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
         item2.addEventListener('click', function () {
             localStorage.setItem('n', 8);
             localStorage.setItem('card_set', 'fruits');
-            localStorage.setItem('card_remain', 20);
+            localStorage.setItem('card_remain', 2);
         
     });
     } else {
@@ -30,7 +32,21 @@ document.addEventListener('DOMContentLoaded', function () {
             localStorage.setItem('card_remain', 10);
         
     });
-    } else {
+    } if(item5){
+        item5.addEventListener('click', function () {
+            const colorSelect = document.getElementById("symbol_number");
+            const selectedColor = colorSelect.value; // Get selected color
+            const fruitSelect = document.getElementById('cards_number');
+            const selectedFruit = fruitSelect.value; // Get selected fruit
+            const setSelect = document.getElementById("symbols_set");
+            const selectedset = setSelect.value; // Get se
+            localStorage.setItem('card_set',selectedset)
+            localStorage.setItem('n', selectedColor);
+            localStorage.setItem('card_remain', selectedFruit);
+
+    });
+    }
+    else {
         console.error('item3 element not found');
     }
 
@@ -96,7 +112,93 @@ let cards_remaining= localStorage.getItem('card_remain')
         'images/BodySymbols/Muscle.png',
         'images/BodySymbols/Nose.png',
         'images/BodySymbols/skull.png'
-    ] : 1; // Default value if none match
+    ] : (card_set == "states") ? [
+    'images/StatesSymbol/Alabama.png',
+    'images/StatesSymbol/Alaska.png',
+    'images/StatesSymbol/Arizona.png',
+    'images/StatesSymbol/Arkansas.png',
+    'images/StatesSymbol/California.png',
+    'images/StatesSymbol/Colorado.png',
+    'images/StatesSymbol/Connecticut.png',
+    'images/StatesSymbol/Delaware.png',
+    'images/StatesSymbol/Florida.png',
+    'images/StatesSymbol/Georgia.png',
+    'images/StatesSymbol/Hawaii.png',
+    'images/StatesSymbol/Idaho.png',
+    'images/StatesSymbol/Illinois.png',
+    'images/StatesSymbol/Indiana.png',
+    'images/StatesSymbol/Iowa.png',
+    'images/StatesSymbol/Kansas.png',
+    'images/StatesSymbol/Kentucky.png',
+    'images/StatesSymbol/Louisiana.png',
+    'images/StatesSymbol/Maine.png',
+    'images/StatesSymbol/Maryland.png',
+    'images/StatesSymbol/Massachusetts.png',
+    'images/StatesSymbol/Michigan.png',
+    'images/StatesSymbol/Minnesota.png',
+    'images/StatesSymbol/Mississippi.png',
+    'images/StatesSymbol/Missouri.png',
+    'images/StatesSymbol/Montana.png',
+    'images/StatesSymbol/Nebraska.png',
+    'images/StatesSymbol/Nevada.png',
+    'images/StatesSymbol/New Hampshire.png',
+    'images/StatesSymbol/New Jersey.png',
+    'images/StatesSymbol/New Mexico.png',
+    'images/StatesSymbol/New York.png',
+    'images/StatesSymbol/North Carolina.png',
+    'images/StatesSymbol/North Dakota.png',
+    'images/StatesSymbol/Ohio.png',
+    'images/StatesSymbol/Oklahoma.png',
+    'images/StatesSymbol/Oregon.png',
+    'images/StatesSymbol/Pennsylvania.png',
+    'images/StatesSymbol/Rhode Island.png',
+    'images/StatesSymbol/South Carolina.png',
+    'images/StatesSymbol/South Dakota.png',
+    'images/StatesSymbol/Tennessee.png',
+    'images/StatesSymbol/Texas.png',
+    'images/StatesSymbol/Utah.png',
+    'images/StatesSymbol/Vermont.png',
+    'images/StatesSymbol/Virginia.png',
+    'images/StatesSymbol/Washington.png',
+    'images/StatesSymbol/West Virginia.png',
+    'images/StatesSymbol/Wisconsin.png',
+    'images/StatesSymbol/Wyoming.png'
+
+    ]: (card_set == "animals") ? [
+        'images/Animal Symbols/Antelope.png',
+        'images/Animal Symbols/Bat.png',
+        'images/Animal Symbols/Bison.png',
+        'images/Animal Symbols/Camel.png',
+        'images/Animal Symbols/Cat.png',
+        'images/Animal Symbols/Cheetah.png',
+        'images/Animal Symbols/Cow.png',
+        'images/Animal Symbols/Crocodile.png',
+        'images/Animal Symbols/Deer.png',
+        'images/Animal Symbols/Llama.png',
+        'images/Animal Symbols/Monkey.png',
+      
+    ]: (card_set == "instruments") ? [
+        'images/Instruments/Accordian.png',  
+        'images/Instruments/Cello.png',
+        'images/Instruments/Clarinet.png',
+        'images/Instruments/Drum.png',
+        'images/Instruments/Electric Guitar.png',
+        'images/Instruments/Flute.png',
+        'images/Instruments/French Horn.png',
+        'images/Instruments/Guitar.png',
+        'images/Instruments/Harp.png',
+        'images/Instruments/Mandolin.png',
+        'images/Instruments/Organ.png',
+        'images/Instruments/Piano.png',
+        'images/Instruments/Synthesizer.png',
+        'images/Instruments/Tambourine.png',
+        'images/Instruments/Trumpet.png',
+        'images/Instruments/Tuba.png',
+        'images/Instruments/Violin.png',
+        'images/Instruments/Xylophone.png',
+
+    ] :
+    1; // Default value if none match
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -258,3 +360,6 @@ function pathToName(path) {
     return filename.split('.')[0];
 }
 });
+
+
+document.getElementById('openPageButton').addEventListener('click', saveSelections);

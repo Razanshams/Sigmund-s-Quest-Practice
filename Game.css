@@ -1,11 +1,23 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background: linear-gradient(135deg, #f0f000, #fbff00, #b8ff20, #ffec20);
+    background-size: 400% 400%; /* To create a large gradient area */
+    animation: gradientAnimation 15s ease infinite; /* Animation for moving gradient */
     text-align: center;
     margin: 0;
     padding: 0;
 }
-
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%; /* Start position */
+    }
+    50% {
+        background-position: 100% 50%; /* Middle position */
+    }
+    100% {
+        background-position: 0% 50%; /* End position */
+    }
+}
 .title {
     text-align: center;
     color: blue; 
@@ -13,17 +25,6 @@ body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.maindiv {
-    color: black;
-    background-color: orange;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    height: 90%;
-    width: 85%;
-    border: 9px solid black;
-    font-family: Tahoma;
-}
 
 .funny {
     width: 80%;
@@ -33,8 +34,7 @@ body {
     height: 60%;
     font-size: x-large;
     font-style: italic;
-    border-color: aqua;
-    background-color: burlywood;
+    
     
 }
 
@@ -51,6 +51,7 @@ body {
     overflow: hidden;           /* Hide overflow if images are too big */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
     visibility: hidden; /* Initially hidden */
+    box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, .3);
 }
 
 #circle-container2 {
@@ -66,6 +67,7 @@ body {
     overflow: hidden;           /* Hide overflow if images are too big */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
     visibility: hidden; /* Initially hidden */
+    box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, .3);
 }
 
 #image-container {
@@ -89,6 +91,11 @@ body {
     padding: 10px 20px;
     font-size: 16px;
     visibility: visible;
+}
+.buttonend {
+    padding: 10px 20px;
+    font-size: 16px;
+
 }
 .gamediv{
     display: flex;          /* Use flexbox to align items */
@@ -125,17 +132,30 @@ body {
     animation: borderAnimation 5s linear infinite; /* Applies the border animation */
 }
 
-#box {
-    width: 200px;
-    height: 100px;
-    background-color: lightcoral;
-    display: none; /* Initially hidden */
-    margin-top: 20px;
-    text-align: center;
-    line-height: 100px; /* Center text vertically */
-    font-size: 20px;
-    border: 2px solid #d50000;
-    display:flex;
-    justify-content: center;
-    align-content:center;
+
+#cards_remaining{
+    visibility: hidden;
 }
+#popup {
+    position: fixed; /* Stays in place when scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dim background overlay */
+    z-index: 9999; /* Ensures it's on top of all content */
+    visibility: hidden;
+  }
+  
+  .popup-content {
+    background-color: white;
+    margin: 15% auto; /* Centers horizontally */
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    max-width: 400px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    position: relative; /* Keeps close button inside the popup */
+    text-align: center;
+  }
+  

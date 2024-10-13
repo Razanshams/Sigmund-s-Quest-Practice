@@ -11,9 +11,16 @@
 <body>
     
     <h1 class="title">Sigmund's Quest</h1> 
-    <div class="maindiv">
-        <div id="box">Congratulations you won!</div>
-        <div id="cards_remaining"></div>
+   
+        <div id="popup" class="popup-box">
+        <div class="popup-content">
+          <h2>Congratulations!</h2>
+          <p>You beat the level.</p>
+          <a href="index.html"><button class="buttonend">Return to Main Menu</button></a>
+
+        </div>
+      </div>
+        <div id="cards_remaining">a</div>
         <div class="funny"> 
     
         <button id="item4",>Press to Start</button>
@@ -36,11 +43,12 @@
                 <p id="output"></p>
         </div> 
         <audio id="myAudio">
-            <source src="audio_jungle/secret.mp3" type="audio/mpeg">
+            <source src="audio_jungle/CorrectAnswer.wav" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
-        
-    </div>
+        <audio id= "wrong_answer" src="audio_jungle/IncorrectAnswer.mp3" type="audio/mpeg"></audio>
+        <audio id= "finished" src="audio_jungle/Finished.wav"type= "audio/mpeg"> </audio>
+   
     <script src="Game.js"></script>
 </body>
 </html>

@@ -42,4 +42,33 @@ function changeText(newText) {
 typeText(originalText);
 
 });
-      
+const imageElement = document.getElementById('image1');
+
+        imageElement.addEventListener('mouseover', function() {
+            imageElement.src = "images/Gear2.png"; // Change to second image on hover
+        });
+
+        imageElement.addEventListener('mouseout', function() {
+            imageElement.src = 'images/gear1.png'; // Change back to first image when not hovering
+        });
+
+        const imageElement1 = document.getElementById('image2');
+
+        imageElement1.addEventListener('mouseover', function() {
+            imageElement1.src = "images/Trophy1.png"; // Change to second image on hover
+        });
+
+        imageElement1.addEventListener('mouseout', function() {
+            imageElement1.src = 'images/Trophy.png'; // Change back to first image when not hovering
+        });
+
+
+        const imageElement2 = document.getElementById('image3');
+
+        imageElement2.addEventListener('mouseover', function() {
+            imageElement2.src = "images/Dictionary2.png"; // Change to second image on hover
+        });
+
+        imageElement2.addEventListener('mouseout', function() {
+            imageElement2.src = 'images/Dictionary1.png'; // Change back to first image when not hovering
+        });

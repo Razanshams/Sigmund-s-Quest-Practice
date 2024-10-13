@@ -44,24 +44,18 @@
                 <option value="Fruits">45</option>
                 <option value="Fruits">50</option>
             </select>
+            <label for="imageUpload">Upload your set of Images (files or folder)!</label>
+            <input type="file" id="imageUpload" name="imageUpload" accept="image/*" multiple webkitdirectory>
         </form>
-
-            <form id="userForm">
-                <label for="dropdown"> Upload your set of Images! </label>
-                <select id="dropdown" name="category">
-                    <option value="">Select...</option>
-                    <option value="Shapes">Shapes</option>
-                    <option value="Body">Body</option>
-                    <option value="Fruits">Fruits</option>
-                </select>
-            </form>
-                
-            <button type="submit">Submit</button>
-        
+        <button type="button" class="item5" id="submitBtn">Submit</button>        
 
         <div id="result"></div>
     </div>
-
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', function() {
+            window.location.href = 'game.html';
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

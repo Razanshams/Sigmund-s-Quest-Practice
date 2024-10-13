@@ -285,6 +285,7 @@ document.getElementById('item4').addEventListener('click', function() {
     showImages('circle-container2', 'image-container2',x[1]);
     const buttonContainer = document.getElementById("item4");
     buttonContainer.style.visibility = 'hidden';
+    document.getElementById("aroundcardremaining").style.visibility = 'visible';
 });
 const inputField = document.getElementById("userInput");
         const audio = document.getElementById("myAudio");

@@ -7,6 +7,10 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction:column;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
 }
 @keyframes gradientAnimation {
     0% {
@@ -151,12 +155,26 @@ body {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-
-#cards_remaining{
-    visibility: hidden;
-    margin-top: 20px;
+#aroundcardremaining{
+    display: flex;
+    flex-direction:column;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
     font-family: "Concert One", sans-serif;
     font-size: 30px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    width: 68%;
+    height: 10%;
+    border-radius: 20px;
+}
+#cards_remaining{
+    visibility: hidden;
+    margin-top: 0px;
+    
+    width: 50px;
+    text-align: center;
+
 }
 #popup {
     position: fixed; /* Stays in place when scrolling */

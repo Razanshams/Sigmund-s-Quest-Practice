@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Filenames</title>
+</head>
+<body>
+
+    <h1>Select Files from a Folder</h1>
+    <label for="folderName">Folder Name:</label>
+    <input type="text" id="folderName" placeholder="Enter folder name" />
+    <br><br>
+    <input type="file" id="fileInput" webkitdirectory multiple />
+    <button onclick="readFilenames()">Read Filenames</button>
+    <ul id="fileList"></ul>
+
+    <script>
+        function readFilenames() {
+            const folderName = document.getElementById('folderName').value;
+            const fileInput = document.getElementById('fileInput');
+            const files = fileInput.files;
+            const fileList = document.getElementById('fileList');
+            fileList.innerHTML = ''; // Clear the existing list
+
+            if (folderName.trim() === '') {
+                alert('Please enter a folder name');
+                return;
+            }
+
+            // Iterate through the FileList object
+            Array.from(files).forEach(file => {
+                // Check if the folder name matches the path of the file
+                if (file.webkitRelativePath.startsWith(folderName)) {
+                    // Prepend '/images/folderName/' to the file name
+                    const filePath = `/images/${folderName}/${file.name}`;
+                    const li = document.createElement('li');
+                    li.textContent = filePath;
+                    fileList.appendChild(li);
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

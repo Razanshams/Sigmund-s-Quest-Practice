@@ -18,50 +18,59 @@
 
         <form id="userForm">
             <label for="dropdown">How Many Symbols do you want per Circle?</label>
-            <select id="dropdown" name="category">
+            <select class="dropdown" id="symbol_number" name="category">
                 <option value="">Select...</option>
-                <option value="Shapes">4</option>
-                <option value="Body">5</option>
-                <option value="Fruits">6</option>
-                <option value="Fruits">7</option>
-                <option value="Fruits">8</option>
-                <option value="Fruits">9</option>
-                <option value="Fruits">10</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
             </select>
         </form>
 
         <form id="userForm">
             <label for="dropdown">Cards until finish <span class="small-text">(Amount the player needs to get right to finish level)</span></label>
-            <select id="dropdown" name="category">
+            <select class ="dropdown" id="cards_number" name="category">
                 <option value="">Select...</option>
-                <option value="Shapes">10</option>
-                <option value="Body">15</option>
-                <option value="Fruits">20</option>
-                <option value="Fruits">25</option>
-                <option value="Fruits">30</option>
-                <option value="Fruits">35</option>
-                <option value="Fruits">40</option>
-                <option value="Fruits">45</option>
-                <option value="Fruits">50</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="25">25</option>
+                <option value="30">30</option>
+                <option value="35">35</option>
+                <option value="40">40</option>
+                <option value="45">45</option>
+                <option value="50">50</option>
             </select>
         </form>
 
             <form id="userForm">
-                <label for="dropdown"> Upload your set of Images! </label>
-                <select id="dropdown" name="category">
+                <label for="dropdown"> Pick your set of images!! </label>
+                <select classid="dropdown" id='symbols_set'name="category">
                     <option value="">Select...</option>
-                    <option value="Shapes">Shapes</option>
-                    <option value="Body">Body</option>
-                    <option value="Fruits">Fruits</option>
+                    <option value="shapes">Shapes</option>
+                    <option value="bodyparts">Body</option>
+                    <option value="fruits">Fruits</option>
+                    <option value="states">States</option>
+                    <option value="animals">Animals</option>
+                    <option value="instruments">Instruments</option>
                 </select>
             </form>
                 
-            <button type="submit">Submit</button>
+            <button id="openPageButton" type="submit">Submit</button>
+
+
+            
         
+     
+            
 
         <div id="result"></div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="Custom.js"></script>
+    <script src="Game.js"></script>
 </body>
 </html>

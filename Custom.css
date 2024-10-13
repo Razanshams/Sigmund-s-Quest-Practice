@@ -39,6 +39,11 @@ body {
     height: 75%;
     border: 7px double blue;
     align-items: center;
+    
+}
+.userform{
+    display: flex;
+    flex-direction: row;
 }
 
 form {
@@ -125,6 +130,7 @@ h1 {
 h2 {
     font-size: 20px;
 }
+
 
 
 

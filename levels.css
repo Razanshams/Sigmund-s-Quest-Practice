@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
 body {
     margin: 0;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -9,8 +12,12 @@ body {
     background-size: 400% 400%; /* To create a large gradient area */
     animation: gradientAnimation 15s ease infinite; /* Animation for moving gradient */
     position: relative; /* Needed for absolute positioning of triangles */
+    font-family: "Concert One", sans-serif;
 }
 
+.title {
+    font-size: 80px;
+}
 @keyframes gradientAnimation {
     0% {
         background-position: 0% 50%; /* Start position */
@@ -67,6 +74,7 @@ body {
     transition: transform 0.2s;
     box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, .3);
     display: flex;
+    flex-direction: column;
     
 }
 .item1:hover {
@@ -89,6 +97,7 @@ body {
     transition: transform 0.2s;
     box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, .3);
     display: flex;
+    flex-direction: column;
 
     
 }
@@ -113,6 +122,7 @@ body {
     cursor: pointer;
     box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, .3);
     display: flex;
+    flex-direction: column;
 
 }
 .item3:hover {
@@ -129,6 +139,23 @@ body {
     justify-content: space-around;
     align-items: center;
     
-    
-    
+  }
+
+  .image1{
+    width: 300px;
+    height: 200px;
+  }
+
+  .shape-img {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 0;
+  }
+
+  .categories {
+    font-size: 32px;
+  }
+
+  a {
+    text-decoration: none;
   }

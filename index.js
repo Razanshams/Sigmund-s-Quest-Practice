@@ -72,3 +72,5 @@ const imageElement = document.getElementById('image1');
         imageElement2.addEventListener('mouseout', function() {
             imageElement2.src = 'images/Dictionary1.png'; // Change back to first image when not hovering
         });
+
+        

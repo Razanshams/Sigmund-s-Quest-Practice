@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #f0f000, #fbff00, #b8ff20, #ffec20);
@@ -21,8 +22,9 @@ body {
 .title {
     text-align: center;
     color: blue; 
-    font-size: 40px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 60px;
+    font-family: "Concert One", sans-serif;
+    margin-bottom: 0;
 }
 
 
@@ -90,8 +92,23 @@ body {
 #item4 {
     padding: 10px 20px;
     font-size: 16px;
+    font-family: "Concert One", sans-serif;
     visibility: visible;
+    width: 10%;
+    height: 50%;
+    border-radius: 15px;
+    background-color: pink;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    background: linear-gradient(45deg, #ff5722, #ff9800);
 }
+
+
+#item4:hover {
+    transform: scale(1.1); /* Makes the button 10% larger */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
 .buttonend {
     padding: 10px 20px;
     font-size: 16px;
@@ -100,7 +117,8 @@ body {
 .gamediv{
     display: flex;          /* Use flexbox to align items */
     justify-content: space-between; /* Optional: Space out the items evenly */
-    gap: 20px; 
+    gap: 40px; 
+    margin-bottom: 20px;
 }
 @keyframes borderAnimation {
     0% {
@@ -130,11 +148,15 @@ body {
     width: 300px;
     font-size: 16px;
     animation: borderAnimation 5s linear infinite; /* Applies the border animation */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 
 #cards_remaining{
     visibility: hidden;
+    margin-top: 20px;
+    font-family: "Concert One", sans-serif;
+    font-size: 30px;
 }
 #popup {
     position: fixed; /* Stays in place when scrolling */

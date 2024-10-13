@@ -17,7 +17,48 @@ body {
 
 .title {
     font-size: 80px;
+    animation: slideIn 1s ease-out forwards;
 }
+
+.slide-image {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+    animation: slideImage 3s ease-out forwards;
+}
+
+.image-left {
+    left: -200px; /* Start off the left side */
+}
+
+
+@keyframes slideImage {
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    25% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100vw); /* Move the images off the screen */
+    }
+}
+
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100vw); /* Start off-screen to the left */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); /* End at original position */
+        opacity: 1; /* Fade in */
+    }
+}
+
 @keyframes gradientAnimation {
     0% {
         background-position: 0% 50%; /* Start position */

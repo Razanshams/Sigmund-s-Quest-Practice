@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
 const typingElement = document.getElementById('typing-text');
 const audioElement = document.getElementById('background-audio');
 let typingTimeout;
@@ -14,7 +13,7 @@ function typeText(text) {
         if (index < text.length) {
             typingElement.innerHTML += text.charAt(index);
             index++;
-            typingTimeout = setTimeout(type, 10); // Adjust typing speed (100ms per character)
+            typingTimeout = setTimeout(type, 25); // Adjust typing speed (100ms per character)
         } else {
             audioElement.pause(); // Stop the audio once typing is done
         }
@@ -40,8 +39,19 @@ function changeText(newText) {
 
 // Initialize with default text
 typeText(originalText);
-
-});
+            
+                    function changeText(newText) {
+                        clearTimeout(typingTimeout); // Stop any ongoing typing animation
+                        typeText(newText);
+                        
+                        // Play the audio and loop it
+                        audioElement.currentTime = 0; // Reset audio to start
+                        audioElement.play(); // Play the audio
+            
+                        
+                    }
+            
+                    
 const imageElement = document.getElementById('image1');
 
         imageElement.addEventListener('mouseover', function() {

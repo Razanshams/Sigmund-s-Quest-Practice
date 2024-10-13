@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
         item2.addEventListener('click', function () {
             localStorage.setItem('n', 8);
             localStorage.setItem('card_set', 'fruits');
-            localStorage.setItem('card_remain', 2);
+            localStorage.setItem('card_remain', 20);
         
     });
     } else {

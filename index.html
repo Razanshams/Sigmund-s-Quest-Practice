@@ -1,0 +1,46 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <title>Main_Menu</title>
+</head>
+<body class="animated-background">
+    <h1>Sigmund's Quest</h1>
+    <audio id="background-audio" src="audio_jungle/Kinloch St 2_G♭_minor__bpm_105.mp3" loop></audio>
+    <div class="menu_top">
+        <a href="Custom.html">
+            <div class="item3" onmouseover="changeText('If you are feeling a little adventurous you can check out my custom mode. You can set the amount symbols on a card, cards to win, and even use your own symbols!')">
+                <img class="image1" id="image1" src="images/gear1.png" alt="Custom Icon 1">
+                
+                Custom
+            </div>
+            
+        </a>
+    <a href="levels.html">
+        <div class="item3" onmouseover="changeText('I made some levels for you to practice your new symbol matching skills. You can check them out here.')"> 
+            <img class="image2" id="image2" src="images/Trophy.png" alt="Custom Icon 1">
+            Levels
+        </div>
+    </a>
+    <a href="Dictionary.html">
+        <div class="item3" onmouseover="changeText('If you even get stuck on a symbol name, or you even want defintion, the dictionary would be a place to check out!')">
+            <img class="image3" id="image3" src="images/Dictionary1.png" alt="Custom Icon 1">
+            Dictionary
+        </div>
+    </a>
+      </div>
+    <div class="menu_bottom">
+        <div id="textbox">
+            <div  class="circle" onclick="changeText('Hey! DO NOT TOUCH ME!')">
+                <img class="Sigmund" src="images/Sigmund1.png">
+            </div>
+             <div class="text" id="typing-text">
+             </div>
+        </div>
+        
+    </div>
+</body>
+<script src="index.js"></script>
+</html>

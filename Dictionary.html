@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Dictionary.css">
+    <title>Dictionary</title>
+</head>
+<body>
+
+    <div class="navbar">Dictionary</div>
+
+    
+
+    <div class="shapes">
+        
+        <div id="shapes"></div>
+    </div>
+
+    <div class="body">
+    
+        <div id="shapes2"></div>
+    </div>
+
+    <div class="fruits">
+        <div id="shapes3"></div>
+    </div>
+    
+
+    <script>
+        const images_complete = [
+            'images/ShapesSymbols/circle.png', 'images/ShapesSymbols/heart.png', 'images/ShapesSymbols/hexagon.png', 'images/ShapesSymbols/kite.png',
+            'images/ShapesSymbols/octagon.png', 'images/ShapesSymbols/parallelogram.png', 'images/ShapesSymbols/semicircle.png',
+            'images/ShapesSymbols/square.png', 'images/ShapesSymbols/star.png', 'images/ShapesSymbols/triangle.png'
+        ];
+
+        const images_complete1 = [
+            'images/BodySymbols/arm.png', 'images/BodySymbols/bone.png', 'images/BodySymbols/brain.png', 'images/BodySymbols/eye.png',
+            'images/BodySymbols/foot.png', 'images/BodySymbols/hand.png', 'images/BodySymbols/heart.png',
+            'images/BodySymbols/Leg.png', 'images/BodySymbols/lungs.png', 'images/BodySymbols/Mouth.png', 'images/BodySymbols/Muscle.png', 'images/BodySymbols/Nose.png', 'images/BodySymbols/skull.png'
+        ];
+
+        const images_complete2 = [
+            'images/FruitSymbols/Apple.png', 'images/FruitSymbols/Avocado.png', 'images/FruitSymbols/Banana.png', 'images/FruitSymbols/Blackberry.png',
+            'images/FruitSymbols/Blueberry.png', 'images/FruitSymbols/Cherry.png', 'images/FruitSymbols/Dragon Fruit.png',
+            'images/FruitSymbols/Grape.png', 'images/FruitSymbols/Grapefruit.png', 'images/FruitSymbols/kiwi.png', 'images/FruitSymbols/Lemon.png', 'images/FruitSymbols/Lime.png',
+            'images/FruitSymbols/Mango.png', 'images/FruitSymbols/Orange.png', 'images/FruitSymbols/Peach.png', 'images/FruitSymbols/Pear.png', 'images/FruitSymbols/Pineapple.png', 'images/FruitSymbols/Raspberry.png',
+            'images/FruitSymbols/Starfruit.png', 'images/FruitSymbols/Strawberry.png', 'images/FruitSymbols/Watermelon.png'
+        ];
+
+        function pathToName(path) {
+            let filename = path.split('/').pop();
+            return filename.split('.')[0];
+        }
+
+        function descriptionRepetition(paths, Id) {
+            let container = document.getElementById(Id);
+            container.innerHTML = '';
+
+            paths.forEach(path => {
+                let imgDiv = document.createElement('div');
+                imgDiv.classList.add('shape');
+
+                let img = document.createElement('img');
+                img.src = path;
+                img.alt = pathToName(path);
+                img.classList.add('shape-image2');
+
+                let descriptionDiv = document.createElement('div');
+                descriptionDiv.textContent = pathToName(path);
+                descriptionDiv.classList.add('shape-div');
+
+                imgDiv.appendChild(img);
+                imgDiv.appendChild(descriptionDiv);
+                container.appendChild(imgDiv);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            descriptionRepetition(images_complete, 'shapes');
+            descriptionRepetition(images_complete1, 'shapes2');
+            descriptionRepetition(images_complete2, 'shapes3');
+        });
+    </script>
+</body>
+</html>

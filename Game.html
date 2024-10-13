@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Game.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigmund's Quest</title>
+</head>
+
+</audio>
+<body>
+    
+    <h1 class="title">Sigmund's Quest</h1> 
+   
+        <div id="popup" class="popup-box">
+        <div class="popup-content">
+          <h2>Congratulations!</h2>
+          <p>You beat the level.</p>
+          <a href="index.html"><button class="buttonend">Return to Main Menu</button></a>
+
+        </div>
+      </div>
+        <div id="cards_remaining">a</div>
+        <div class="funny"> 
+    
+        <button id="item4",>Press to Start</button>
+        <div class="gamediv">
+            <div id="circle-container1" >  <!-- Hidden by default -->
+                <div id="image-container1"></div>
+                </div>
+            <div id="circle-container2">  <!-- Hidden by default -->
+                <div id="image-container2">
+        </div>
+                </div>
+            </div>
+            </div>
+            
+
+                <!-- Text input box -->
+                <label for="userInput"></label>
+                <input type="text" id="userInput" name="userInput">
+            
+                <p id="output"></p>
+        </div> 
+        <audio id="myAudio">
+            <source src="audio_jungle/CorrectAnswer.wav" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <audio id= "wrong_answer" src="audio_jungle/IncorrectAnswer.mp3" type="audio/mpeg"></audio>
+        <audio id= "finished" src="audio_jungle/Finished.wav"type= "audio/mpeg"> </audio>
+   
+    <script src="Game.js"></script>
+</body>
+</html>

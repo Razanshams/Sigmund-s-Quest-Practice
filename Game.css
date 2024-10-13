@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f0f000, #fbff00, #b8ff20, #ffec20);
+    background-size: 400% 400%; /* To create a large gradient area */
+    animation: gradientAnimation 15s ease infinite; /* Animation for moving gradient */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%; /* Start position */
+    }
+    50% {
+        background-position: 100% 50%; /* Middle position */
+    }
+    100% {
+        background-position: 0% 50%; /* End position */
+    }
+}
+.title {
+    text-align: center;
+    color: blue; 
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+.funny {
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 60%;
+    font-size: x-large;
+    font-style: italic;
+    
+    
+}
+
+#circle-container1 {
+    width: 400px;               /* Set width and height for the circle */
+    height: 400px;
+    background-color: white;    /* Circle background color */
+    border-radius: 15%;         /* Make it a circle */
+    display: flex;              /* Use flexbox to center images */
+    align-items: center;        /* Center vertically */
+    justify-content: center;     /* Center horizontally */
+    margin: 20px auto;         /* Center the circle on the page */
+    position: relative;         /* Required for absolute positioning of images */
+    overflow: hidden;           /* Hide overflow if images are too big */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    visibility: hidden; /* Initially hidden */
+    box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, .3);
+}
+
+#circle-container2 {
+    width: 400px;               /* Set width and height for the circle */
+    height: 400px;
+    background-color: white;    /* Circle background color */
+    border-radius: 15%;         /* Make it a circle */
+    display: flex;              /* Use flexbox to center images */
+    align-items: center;        /* Center vertically */
+    justify-content: center;     /* Center horizontally */
+    margin: 20px auto;         /* Center the circle on the page */
+    position: relative;         /* Required for absolute positioning of images */
+    overflow: hidden;           /* Hide overflow if images are too big */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    visibility: hidden; /* Initially hidden */
+    box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, .3);
+}
+
+#image-container {
+    display: flex;               
+    flex-wrap: wrap;            
+    justify-content: center;     
+}
+
+.image {
+    display: block;              
+    margin: 0px;               
+    max-width: 100px;           
+    height: auto;               
+}
+
+.hidden {
+    display: none;              
+}
+
+#item4 {
+    padding: 10px 20px;
+    font-size: 16px;
+    visibility: visible;
+}
+.buttonend {
+    padding: 10px 20px;
+    font-size: 16px;
+
+}
+.gamediv{
+    display: flex;          /* Use flexbox to align items */
+    justify-content: space-between; /* Optional: Space out the items evenly */
+    gap: 20px; 
+}
+@keyframes borderAnimation {
+    0% {
+        border-color: #ff5733;
+    }
+    20% {
+        border-color: #d78a16;
+    }
+    40% {
+        border-color: #e6fe0b;
+    }
+    60% {
+        border-color: #04f7aa;
+    }
+    80% {
+        border-color: #0062ff;
+    }
+    100% {
+        border-color: #e100ff;
+    }
+}
+
+#userInput {
+    border: 3px solid #ccc;
+    border-radius: 15px; /* Makes the edges rounded */
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    animation: borderAnimation 5s linear infinite; /* Applies the border animation */
+}
+
+
+#cards_remaining{
+    visibility: hidden;
+}
+#popup {
+    position: fixed; /* Stays in place when scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dim background overlay */
+    z-index: 9999; /* Ensures it's on top of all content */
+    visibility: hidden;
+  }
+  
+  .popup-content {
+    background-color: white;
+    margin: 15% auto; /* Centers horizontally */
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    max-width: 400px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    position: relative; /* Keeps close button inside the popup */
+    text-align: center;
+  }
+  

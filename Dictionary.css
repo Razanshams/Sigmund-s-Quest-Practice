@@ -12,9 +12,8 @@
     font-size: 50px; 
 }
 
-
 .container {
-    background-color: grey;
+    background-color: white;
     display: flex;
     justify-content: space-around;
     height: 500px;
@@ -26,61 +25,75 @@
     justify-content: center;
     font-family: "Concert One", sans-serif;
     font-size: 100px;
-    background-color: red;
 }
 
-.shapes {
-    background-color: aqua;
+.shapes, .body, .fruits {
+    background-color:  white;
     font-family: "Concert One", sans-serif;
     font-size: 40px;
+    margin: 20px;
+    border: 5px solid black;
+    border-radius: 15px;
+    padding: 8px;
 }
 
-.body {
-    background-color: blueviolet;
-    font-family: "Concert One", sans-serif;
-    font-size: 40px;
-}
-
-.fruits {
-    background-color: aquamarine;
-    font-family: "Concert One", sans-serif;
-    font-size: 40px;
-}
-
-#shapes {
-    display: flex; /* Ensures the content stacks vertically */
+#shapes, #shapes2, #shapes3 {
+    display: flex;
     flex-wrap: wrap;
-    width: 100%;    /* Adjust as needed */
-    overflow: auto; /* Prevents overflow issues */
-    margin-bottom: 20px; /* Space from the next div */
+    justify-content: center;
+    width: 100%;
+}
 
+.shapes::before,
+.body::before,
+.fruits::before {
+    content: attr(class); /* Automatically use the class name as text */
+    font-size: 60px; /* Adjust this value to make it larger */
+    font-weight: bold;
+    display: block;  /* Forces the text to be on its own line */
+    margin-bottom: 10px; /* Space below the title */
 }
 
 
-#shapes1 {
-    display: flex; /* Ensures the content stacks vertically */
-    flex-wrap: wrap;
-    width: 100%;    /* Adjust as needed */
-    overflow: auto; /* Prevents overflow issues */
-    margin-bottom: 20px; /* Space from the next div */
+.shape img {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
 }
 
-#shapes2 {
-    display: flex; /* Ensures the content stacks vertically */
-    flex-wrap: wrap;
-    width: 100%;    /* Adjust as needed */
-    overflow: auto; /* Prevents overflow issues */
-    margin-bottom: 20px; /* Space from the next div */
+.shape-div {
+    text-align: center;
+    margin-top: 10px;
 }
 
-
-#shapes3 {
-    display: flex; /* Ensures the content stacks vertically */
-    flex-wrap: wrap;
-    width: 100%;    /* Adjust as needed */
-    overflow: auto; /* Prevents overflow issues */
-    margin-bottom: 20px; /* Space from the next div */
+.shape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Ensure the background covers the entire page */
+    background: linear-gradient(45deg, #ff6ec4, #7873f5, #3f87a6, #f5f7fa);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    font-family: 'Arial', sans-serif;
+    margin-top: 10px;
+    /* try adding a margin to the bottom */
+}
 
-
+/* Define the gradient animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function () {
 const typingElement = document.getElementById('typing-text');
 const audioElement = document.getElementById('background-audio');
 let typingTimeout;
@@ -39,4 +40,6 @@ function changeText(newText) {
 
 // Initialize with default text
 typeText(originalText);
+
+});
       

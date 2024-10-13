@@ -42,7 +42,7 @@ body {
     width: 400px;               /* Set width and height for the circle */
     height: 400px;
     background-color: white;    /* Circle background color */
-    border-radius: 50%;         /* Make it a circle */
+    border-radius: 15%;         /* Make it a circle */
     display: flex;              /* Use flexbox to center images */
     align-items: center;        /* Center vertically */
     justify-content: center;     /* Center horizontally */
@@ -57,7 +57,7 @@ body {
     width: 400px;               /* Set width and height for the circle */
     height: 400px;
     background-color: white;    /* Circle background color */
-    border-radius: 50%;         /* Make it a circle */
+    border-radius: 15%;         /* Make it a circle */
     display: flex;              /* Use flexbox to center images */
     align-items: center;        /* Center vertically */
     justify-content: center;     /* Center horizontally */
